@@ -1,0 +1,13 @@
+body{
+    background-image: url('homepage-images/mountain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.bio{
+    background-color: lavender;
+    
+    width: 60%;
+    
+}
