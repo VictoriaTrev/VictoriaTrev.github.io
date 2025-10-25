@@ -1,5 +1,7 @@
 body{
+    background-color: lavender;
     background-image: url('homepage-images/mountain.jpg');
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -7,7 +9,46 @@ body{
 
 .bio{
     background-color: lavender;
-    
     width: 60%;
-    
+    margin: auto;
+    padding: 2%;
+}
+
+.navbar{
+    background-color: lavender;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #bd87f3;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    overflow: hidden;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+ul a.active{
+    background-color: rgb(150, 102, 247);
+}
+
+h2{
+    margin: 0;
 }
