@@ -22,16 +22,17 @@ body{
     align-items: center;
 }
 
-button{
+a{
     border: none;
     background-color: transparent;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 20px;
     text-align: left;
+    text-decoration: none;
     cursor: pointer;
 }
 
-button:hover{
+a:hover{
     background-color: #bd87f3;
 }
 
