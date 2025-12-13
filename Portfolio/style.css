@@ -1,20 +1,5 @@
-body{
-    background-color: lavender;
-    background-image: url('homepage-images/mountain.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-}
-
-.bio{
-    background-color: lavender;
-    width: 60%;
-    margin: auto;
-    padding: 2%;
-}
-
-.navbar{
+/* Overall Pages */
+.navbar {
     background-color: lavender;
     width: 100%;
     height: 50px;
@@ -22,7 +7,7 @@ body{
     align-items: center;
 }
 
-a{
+.navbar a {
     border: none;
     background-color: transparent;
     font-family: 'Times New Roman', Times, serif;
@@ -32,11 +17,11 @@ a{
     cursor: pointer;
 }
 
-a:hover{
+.navbar a:hover {
     background-color: #bd87f3;
 }
 
-ul{
+.navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 15px;
@@ -46,10 +31,181 @@ ul{
     text-align: center;
 }
 
-ul a.active{
+.navbar ul a.active {
     background-color: rgb(150, 102, 247);
 }
 
-h2{
+
+
+/* Homepage */
+.homePage {
+    background-color: lavender;
+    background-image: url('homepage-images/mountain.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.homePage .bio {
+    background-color: lavender;
+    width: 60%;
+    margin: auto;
+    padding: 2%;
+}
+
+.homePage h2 {
     margin: 0;
 }
+
+
+
+/* Projects */
+.projectPage {
+    background-color: #212133;
+}
+
+.projectPage .projects {
+    background-color: lavender;
+}
+
+.projectPage h1 {
+    text-align: center;
+}
+
+.projectPage h2 {
+    text-align: center;
+}
+
+.projectPage a {
+    font-weight: bold;
+    padding-left: 7%;
+}
+
+.projectPage p {
+    padding-left: 5%;
+}
+
+.projectPage .projectContainer {
+    border: 5px solid #212133;
+    color: #212133;
+    margin: 5%;
+    width: 400px;
+}
+
+.projectPage .projectContainer .img {
+    display: flex;
+    justify-content: center;
+}
+
+.projectPage .projectGrid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/* ClockIt */
+.clockIt {
+    background-color: #212133;
+}
+
+.clockIt h1 {
+    text-align: center;
+    padding: 2%;
+}
+
+.clockIt h2 {
+    margin: 5%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.clockIt h3 {
+    margin: 5%;
+    font-weight: bold;
+}
+
+.clockIt p {
+    margin: 7%;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.clockIt .appMain {
+    background-color: lavender;
+}
+
+.clockIt .teamContainer {
+    border: 5px solid #212133;
+    color: #212133;
+    margin: 7%;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.clockIt .team{
+    display: flex;
+}
+
+.clockIt .data p{
+    margin-bottom: 10px;
+}
+
+.clockIt .data h5{
+    font-size: large;
+    margin: 7%;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+.clockIt .data h6{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 7%;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.clockIt .data ul{
+    font-size: medium;
+    margin: 7%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.clockIt .design h5 {
+    margin: 6%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.clockIt .imgSingle{
+    margin: 7%;
+    margin-top: 10px;
+    margin-bottom: 75px;
+}
+
+.clockIt .imgGroup,
+.clockIt .imgGroupGreen {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-bottom: 75px;
+}
+
+.clockIt .imgGroup img,
+.clockIt .imgGroupGreen img {
+    flex-shrink: 0;
+}
+
+.clockIt .gif{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+
