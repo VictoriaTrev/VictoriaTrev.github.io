@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href = "style.css" rel = "stylesheet">
+        <title> VictoriaTrev </title>
+        <meta name = "viewport" content = "width = device - width, inital-scale = 1.0">
+    </head>
+    <body>
+        <div class = "navbar">
+            <ul>
+                <li style = "float: left;"><a href = "index.html" > Home </a></li>
+                <li><a id = "theme"> Change Theme </a></li>
+                <li><a href = "contact.html" > Contact </a></li>
+                <li><a href = "resume.html" > Resume </a></li>
+                <li><a href = "projects.html" > Projects </a></li>
+            </ul>
+        </div>
+
+        <div class = "resume">
+            <p><a href = "imageandgifs/resume.png">Download Resume </a></p>
+            <img src = "imageandgifs/resume.png"> 
+        </div>
+
+        <footer>
+            <p> Victoria Treviño @ 2026 
+                <a href = "https://www.linkedin.com/in/victoria-trevi%C3%B1o-460558385/"> LinkedIn </a>
+                |
+                <a href = "https://nmsu.joinhandshake.com/profiles/b28zda"> Handshake</a>
+            </p>
+        </footer>
+
+        <!-- JS for the theme toggle -->
+        <script>
+            document.getElementById("theme").onclick = function(){
+                document.getElementsByTagName("body")[0].classList.toggle("dark");
+            }; 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href = "style.css" rel = "stylesheet">
+        <title> VictoriaTrev </title>
+    </head>
+    <body>
+        <div class = "navbar">
+            <ul>
+                <li style = "float: left;"><a href = "index.html" > Home </a></li>
+                <li><a id = "theme"> Change Theme </a></li>
+                <li><a href = "contact.html" > Contact </a></li>
+                <li><a href = "resume.html" > Resume </a></li>
+                <li><a href = "projects.html" > Projects </a></li>
+            </ul>
+        </div>
+        <h1> Projects \ Hobbies </h1>
+        <p> I have a large array of hobbies of things that I like to do and have interest in. 
+            The majority of them are art related in graphics, sculpture, imagery, textiles, and more.
+            I love exploring new crafts and ways to make different games to play with friends and family.
+            As for Computer Science aspect of things, I enjoy coding games and making websites
+            that I can code and design all in one. 
+        </p>
+
+        <h2> Art Projects</h2>
+        <div class = "row"> 
+            <div class = "column">
+                <img src = "imageandgifs/NMSUDrawing1.jpg">
+                <h2> Fabric Drawing </h2>
+                <p> Drawing I Class at NMSU </p>
+            </div>
+            <div class = "column">
+                <img src = "imageandgifs/IMG_20231109_115432720~2.jpg">
+                <h2> Still Life </h2>
+                <p> Drawing I Class at NMSU </p>
+            </div>
+            <div class = "column">
+                <img src = "imageandgifs/MetalsProj3-2024.jpg">
+                <h2> Project 3 - Meaning </h2>
+                <p> Metals I Class at NMSU </p>
+            </div>
+            <div class = "column">
+                <img src = "imageandgifs/IMG_20220930_193414879.jpg">
+                <h2> Letterman Crochet Jacket </h2>
+                <p> A jacket crocheted to represent my highscool when I had graduated.
+                    I actually designed the pattern myself, it was my first design and
+                    finished crochet jacket. Overall, I'm very happy with it and it has 
+                    inspired me to make new patterns.
+                </p>
+            </div>
+        </div>
+
+        <h1> Fall 2025 Semester </h1>
+        <h2> NMSU: Digital Game Design </h2>
+        <div class = "row"> 
+            <div class = "column">
+                <img src = "imageandgifs/dodgeTheCreeps.gif">
+                <h2> Dodge The Creeps </h2>
+                <p> Altered godot tutorial game using godot.</p>
+            </div>
+            <div class = "column">
+                <img src = "imageandgifs/AntVenture.gif">
+                <h2> Antventure </h2>
+                <p> Game Jam 1 using godot.</p>
+            </div>
+            <div class = "column">
+                <img src = "imageandgifs/midnightmunchies.gif">
+                <h2> Midnight Munchies </h2>
+                <p> Game Jam 2 using godot.</p>
+            </div>
+            <div class = "column">
+                <img src = "imageandgifs/GifAngryBees.gif">
+                <h2> Angry Bees </h2>
+                <p> Game Jam 4 using godot.</p>
+            </div>
+        </div>
+
+        <h2> NMSU: Human Centered Interaction </h2>
+        <div class = "row"> 
+            <div class = "column">
+                <img src = "imageandgifs/4250HCC-Spring2025.gif">
+                <h2> Clock It! </h2>
+                <p> Website Application using HTML, CSS, and JavaScript</p>
+            </div>
+        </div>
+
+        <footer>
+            <p> Victoria Treviño @ 2026 
+                <a href = "https://www.linkedin.com/in/victoria-trevi%C3%B1o-460558385/"> LinkedIn </a>
+                |
+                <a href = "https://nmsu.joinhandshake.com/profiles/b28zda"> Handshake</a>
+            </p>
+        </footer>
+
+        <!-- JS for the theme toggle -->
+        <script>
+            document.getElementById("theme").onclick = function(){
+                document.getElementsByTagName("body")[0].classList.toggle("dark");
+            }; 
+        </script>
+    </body>
+</html>
