@@ -1,0 +1,32 @@
+body{
+    background-color: #31231b;
+}
+
+h1{
+    text-align: center;
+    background-color: #cca996;
+}
+
+button{
+    background-color: #cca996;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 3%;
+
+}
+
+button:hover{
+    background-color: #9e7159;
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 3%;
+}
+
+.rulecontent{
+    background-color: #cca996;
+    color: #31231b;
+    margin: 0% 25%;
+    text-align: center;
+    visibility: hidden;
+}
