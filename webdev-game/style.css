@@ -7,12 +7,21 @@ h1{
     background-color: #cca996;
 }
 
+
+
+/* Rule CSS */
+
 button{
     background-color: #cca996;
     font-size: 100%;
     font-weight: bold;
     padding: 3%;
-
+    cursor: pointer;
+    display: inline-block;
+    border:#9e7159 5px solid;
+    border-radius: 20%;
+    margin: 1%;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
 }
 
 button:hover{
@@ -28,5 +37,125 @@ button:hover{
     color: #31231b;
     margin: 0% 25%;
     text-align: center;
+    display: none;
+    
+}
+/*
+.restart{
+    display: none;
+}*/
+
+.show{
+    display: block;
+}
+
+.hide{
     visibility: hidden;
+}
+
+.showrestart{
+    display: visible;
+}
+
+
+
+/* Game Board CSS */
+.board{
+    display: grid;
+    margin-left: 10%;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    gap: 20px;
+
+    background-color: #cca996;
+    border:#9e7159 10px solid;
+    border-radius: 20%;
+    padding: 5% 7%;
+    margin: 0% 10%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 1);
+}
+
+.store1num{
+    text-align: center;
+    font-size: 300%;
+}
+
+.store2num{
+    text-align: center;
+    font-size: 300%;
+}
+
+.pitnum{
+    text-align: center;
+    font-size: 150%;
+}
+
+.player1pits{
+    border: 50px #AB4E68 solid;
+    border-radius: 100%;
+}
+
+.player1store{
+    background-color: #AB4E68;
+    border: 60px #AB4E68 solid;
+    border-radius: 100%;
+    grid-area: 2 / 1 / span 2 / span 1;
+}
+
+.player2pits{
+    border: 50px #247BA0 solid;
+    border-radius: 100%;
+}
+
+.player2store{
+    background-color: #247BA0;
+    border: 60px #247BA0 solid;
+    border-radius: 100%;
+    grid-area: 2 / 8 / span 2 / span 1;
+}
+
+
+
+.win{
+    text-align: center;
+}
+
+
+
+
+/* Animations */
+.seeds{
+    border: 20px lavender solid;
+    background-color: lavender;
+    border-radius: 100%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    animation: seedanimation;
+    animation-duration: .5s;
+}
+
+@keyframes seedanimation{
+    from{
+        transform: translate(0, 0);
+    }
+
+    to{
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+
+.spin{
+    animation: spinanimation 1s linear 1;
+    transform-origin: center;
+}
+
+@keyframes spinanimation{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
 }

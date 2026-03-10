@@ -3,29 +3,135 @@
     <head>
         <script src = "script.js"></script>
         <link rel = "stylesheet" href = "style.css">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
     </head>
     <body>
         <h1> Multiplayer Game - Mancala </h1>
-        <button> Game Type </button>
         
-        <div class = rule>
-            <button> Rules </button>
-            <div class = rulecontent>
+        <div class = "rule">
+            <button onclick = "rules()" id = "rulebtn"> Rules </button>
+            <div id = "ruleopen" class = "rulecontent">
                 <h2> Rules: </h2>
                 <ol> Game moves counter-clockwise </ol>
                 <ol> Once you click the seeds in a pit, you must use that set </ol>
                 <ol> Seeds can be placed in any pit and your store </ol>
                 <ol> You cannot place seeds in opponents store </ol>
-                <ol> Game moves counter-clockwise</ol>
                 
+                <br>
+
                 <h2> Special Rules: </h2>
-                <ol style> Special Rules only apply when game mode is in "Advanced" </ol>
-                <ol> If the your last seed ends in your store, you gain an extra turn</ol>
-                <ol> </ol>
+                <ol> If your last seed ends in your store, you gain an extra turn :O</ol>
+
+                <br>
+
                 <h2> How to Play: </h2>
+                <ol> When you are ready to play, click the "Play" button </ol>
+                <ol> To restart the game simply click the "Restart Game" button</ol>
+                <ol> Player 1 is pink/red - if you are player 1 you can hover over your colored pits
+                    once you click it, you are locked in 'v'
+                </ol>
+                <ol> Player 2 is cyan/blue - if you are player 2 you can hover over your colored pits
+                    once you click it, you are locked in :p
+                </ol>
+                <ol> You continue to play back and forth until one player wins</ol>
+                <ol> Bonus turn: the player that gets the bonus gets to pick another pit</ol>
+                
+                <br>
 
                 <h2> End of Game: </h2>
+                <ol> The game ends when either player has no more seeds in their pit lot</ol>
+                <ol> Whoever has the most seeds in their store wins!!! :D</ol>
+
+                <ol> TO CLOSE THE RULES, CLICK THE "Rule" BUTTON AGAIN </ol>
+                <ol> I hope you enjoy the game :D </ol>
             </div>
+        </div>
+
+        <div class = "play" id = "playbtn">
+            <button onclick = "play()"> Play </button>
+        </div>
+
+        <div class = "restart" id = "restartbtn">
+            <button onclick = "restart()"> Restart Game </button>
+        </div>
+
+        <div class = "player">
+            <h1 id = "h1"> Player 1 Turn </h1>
+        </div>
+
+        <div class = "board" id = "game">
+        <!-- GENERAL BOARD WHEN PLAYER NOT SELECTED
+            <div class = "notselected1">
+                <div class = "store1"></div>
+                
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+            </div>
+
+            <div class = "notselected2">
+                <div class = "store2"></div>
+                
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+                <div class = "pit"></div>
+            </div> 
+        -->
+            <!-- Pit & Store Number Elements -->
+            <div class = "store1num" id = "store1"> 0 </div>
+
+            <div class = "pitnum" id = "pit1"> 0 </div>
+            <div class = "pitnum" id = "pit2"> 0 </div>
+            <div class = "pitnum" id = "pit3"> 0 </div>
+            <div class = "pitnum" id = "pit4"> 0 </div>
+            <div class = "pitnum" id = "pit5"> 0 </div>
+            <div class = "pitnum" id = "pit6"> 0 </div>
+            <div class = "pitnum">  </div>
+
+            <!-- Pit & Store Elements -->
+            <div class = "player1store" id = "s1select"></div>
+            
+            <div class = "player1pits" id = "p1select1" onclick = "p1move1()" onmouseover = "p1over1()" onmouseout = "p1out1()"></div>
+            <div class = "player1pits" id = "p1select2" onclick = "p1move2()" onmouseover = "p1over2()" onmouseout = "p1out2()"></div>
+            <div class = "player1pits" id = "p1select3" onclick = "p1move3()" onmouseover = "p1over3()" onmouseout = "p1out3()"></div>
+            <div class = "player1pits" id = "p1select4" onclick = "p1move4()" onmouseover = "p1over4()" onmouseout = "p1out4()"></div>
+            <div class = "player1pits" id = "p1select5" onclick = "p1move5()" onmouseover = "p1over5()" onmouseout = "p1out5()"></div>
+            <div class = "player1pits" id = "p1select6" onclick = "p1move6()" onmouseover = "p1over6()" onmouseout = "p1out6()"></div>
+
+            <div class = "player2pits" id = "p2select1" onclick = "p2move1()" onmouseover = "p2over1()" onmouseout = "p2out1()"></div>
+            <div class = "player2pits" id = "p2select2" onclick = "p2move2()" onmouseover = "p2over2()" onmouseout = "p2out2()"></div>
+            <div class = "player2pits" id = "p2select3" onclick = "p2move3()" onmouseover = "p2over3()" onmouseout = "p2out3()"></div>
+            <div class = "player2pits" id = "p2select4" onclick = "p2move4()" onmouseover = "p2over4()" onmouseout = "p2out4()"></div>
+            <div class = "player2pits" id = "p2select5" onclick = "p2move5()" onmouseover = "p2over5()" onmouseout = "p2out5()"></div>
+            <div class = "player2pits" id = "p2select6" onclick = "p2move6()" onmouseover = "p2over6()" onmouseout = "p2out6()"></div>
+            
+            <div class = "player2store" id = "s2select"></div>
+
+            <!-- Pit & Store Number Elements -->
+            <div class = "pitnum"></div>
+            <div class = "pitnum" id = "pit7"> 0 </div>
+            <div class = "pitnum" id = "pit8"> 0 </div>
+            <div class = "pitnum" id = "pit9"> 0 </div>
+            <div class = "pitnum" id = "pit10"> 0 </div>
+            <div class = "pitnum" id = "pit11"> 0 </div>
+            <div class = "pitnum" id = "pit12"> 0 </div>
+
+            <div class = "store2num" id = "store2"> 0 </div>
+            
+        </div>
+
+        <div class = "seed" id = "seedanimation">
+
+        </div>
+
+        <div class = "win" id = "wingif">
+
         </div>
     </body>
 </html>
