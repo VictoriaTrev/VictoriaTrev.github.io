@@ -1,3 +1,7 @@
+console.log("CLIENT SCRIPT LOADED");
+
+const socket = io();
+
 let player = 0;
 let p1store = 0;
 
@@ -5,7 +9,7 @@ let gameover = false;
 
 let endpit = null;
 
-const array = [p1store = 0, p1pit1 = 4, p1pit2 = 4, p1pit3 = 4, p1pit4 = 4, p1pit5 = 4, p1pit6 = 4, 
+let array = [p1store = 0, p1pit1 = 4, p1pit2 = 4, p1pit3 = 4, p1pit4 = 4, p1pit5 = 4, p1pit6 = 4, 
     p2pit1 = 4, p2pit2 = 4, p2pit3 = 4, p2pit4 = 4, p2pit5 = 4, p2pit6 = 4, p2store = 0];
 
 let store1 = document.getElementById("store1");
@@ -79,6 +83,8 @@ function updateseed(){
 function play(){
     updateboard();
 
+    socket.emit("playGame");
+
     pit1.innerHTML = "4";
     pit2.innerHTML = "4";
     pit3.innerHTML = "4";
@@ -104,7 +110,6 @@ function play(){
 
 //Correct Player Condition
 function playerturn(){
-    console.log(player);
     if(player == 1){
         document.getElementById("h1").innerHTML = "Player 1 Turn";
         board();
@@ -174,7 +179,8 @@ function board(){
 // Seed Moving Functions Player 1
 function p1move1(){
     if(player == 1){
-        updateboard();
+        socket.emit("pitSelected", 1);
+        /*updateboard();
 
         let apit1 = [0, 7, 8, 9, 10, 11, 12, 6, 5, 4, 3, 2, 1];
         let seeds = array[1];
@@ -209,13 +215,14 @@ function p1move1(){
         }
 
         player = 2;
-        playerturn();
+        playerturn();*/
     }  
 }
 
 function p1move2(){
     if(player == 1){
-        updateboard();
+        socket.emit("pitSelected", 2);
+        /*updateboard();
 
         let apit1 = [1, 0, 7, 8, 9, 10, 11, 12, 6, 5, 4, 3, 2];
         let seeds = array[2];
@@ -250,13 +257,14 @@ function p1move2(){
         }
 
         player = 2;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p1move3(){
     if(player == 1){
-        updateboard();
+        socket.emit("pitSelected", 3);
+        /*updateboard();
 
         let apit1 = [2, 1, 0, 7, 8, 9, 10, 11, 12, 6, 5, 4, 3];
         let seeds = array[3];
@@ -291,13 +299,14 @@ function p1move3(){
         }
 
         player = 2;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p1move4(){
     if(player == 1){
-        updateboard();
+        socket.emit("pitSelected", 4);
+        /*updateboard();
 
         let apit1 = [3, 2, 1, 0, 7, 8, 9, 10, 11, 12, 6, 5, 4];
         let seeds = array[4];
@@ -332,13 +341,14 @@ function p1move4(){
         }
 
         player = 2;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p1move5(){
     if(player == 1){
-        updateboard();
+        socket.emit("pitSelected", 5);
+        /*updateboard();
 
         let apit1 = [4, 3, 2, 1, 0, 7, 8, 9, 10, 11, 12, 6, 5];
         let seeds = array[5];
@@ -373,13 +383,14 @@ function p1move5(){
         }
 
         player = 2;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p1move6(){
     if(player == 1){
-        updateboard();
+        socket.emit("pitSelected", 6);
+        /*updateboard();
 
         let apit1 = [5, 4, 3, 2, 1, 0, 7, 8, 9, 10, 11, 12, 6];
         let seeds = array[6];
@@ -414,7 +425,7 @@ function p1move6(){
         }
 
         player = 2;
-        playerturn();
+        playerturn();*/
     }
 }
 
@@ -424,7 +435,8 @@ function p1move6(){
 // Seed Moving Functions Player 2
 function p2move1(){
     if(player == 2){
-        updateboard();
+        socket.emit("pitSelected", 7);
+        /*updateboard();
 
         let apit2 = [8, 9, 10, 11, 12, 13, 6, 5, 4, 3, 2, 1, 7];
         let seeds = array[7];
@@ -459,13 +471,14 @@ function p2move1(){
         }
 
         player = 1;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p2move2(){
     if(player == 2){
-        updateboard();
+        socket.emit("pitSelected", 8);
+        /*updateboard();
 
         let apit2 = [9, 10, 11, 12, 13, 6, 5, 4, 3, 2, 1, 8];
         let seeds = array[8];
@@ -500,13 +513,14 @@ function p2move2(){
         }
 
         player = 1;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p2move3(){
     if(player == 2){
-        updateboard();
+        socket.emit("pitSelected", 9);
+        /*updateboard();
 
         let apit2 = [10, 11, 12, 13, 6, 5, 4, 3, 2, 1, 8, 9];
         let seeds = array[9];
@@ -541,13 +555,14 @@ function p2move3(){
         }
 
         player = 1;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p2move4(){
     if(player == 2){
-        updateboard();
+        socket.emit("pitSelected", 10);
+        /*updateboard();
 
         let apit2 = [11, 12, 13, 6, 5, 4, 3, 2, 1, 8, 9, 10];
         let seeds = array[10];
@@ -582,13 +597,14 @@ function p2move4(){
         }
 
         player = 1;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p2move5(){
     if(player == 2){
-        updateboard();
+        socket.emit("pitSelected", 11);
+        /*updateboard();
 
         let apit2 = [12, 13, 6, 5, 4, 3, 2, 1, 8, 9, 10, 11];
         let seeds = array[11];
@@ -623,13 +639,14 @@ function p2move5(){
         }
 
         player = 1;
-        playerturn();
+        playerturn();*/
     }
 }
 
 function p2move6(){
     if(player == 2){
-        updateboard();
+        socket.emit("pitSelected", 12);
+        /*updateboard();
 
         let apit2 = [13, 6, 5, 4, 3, 2, 1, 8, 9, 10, 11, 12];
         let seeds = array[12];
@@ -664,7 +681,7 @@ function p2move6(){
         }
 
         player = 1;
-        playerturn();
+        playerturn();*/
     }
 }
 
@@ -869,3 +886,42 @@ function seedanimation(x, y){
         document.getElementById("seedanimation").style.setProperty("--y", "0px");
     }, 500);
 }
+
+
+
+
+
+
+
+/* Server Connections*/
+socket.on("updateBoard", (update) =>{
+    array = update.array;
+    player = update.playerTurn;
+
+    updateboard();
+    updateseed();
+    playerturn();
+});
+
+socket.on("start", () =>{
+    console.log("Game Starting");
+
+    player = 1;
+    playerturn();
+});
+
+socket.on("playerType", (num) =>{
+    if(num == 1){
+        alert("You are player 1!");
+    }
+    else{
+        alert("You are player 2!");
+    }
+});
+
+socket.on("gameOver", (finalValue) =>{
+    array = finalValue;
+    updateseed();
+
+    endgame();
+})
